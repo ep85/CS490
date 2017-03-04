@@ -1,72 +1,54 @@
-<?php 
-    $url = 'https://web.njit.edu/~ep85/CS490/login.php';
-    $fields = array(
-        'ucid' => urlencode($_POST["ucid"]),
-        'password' => urlencode($_POST["password"]),
-    );
-    //url-ify the data for the POST
-    foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
-    rtrim($fields_string, '&');
+<?php
 
-    //open connection
-    $ch = curl_init();
+function checkFail() {
+	echo "You are really a nice person, Have a nice time!";
 
-    //set the url, number of POST vars, POST data
-    curl_setopt($ch,CURLOPT_URL, $url);
-    curl_setopt($ch,CURLOPT_POST, count($fields));
-    curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-    //execute post
-    $result = curl_exec($ch);
+	$ch = curl_init("https://cp4.njit.edu/cp/home/login");
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$text = curl_exec($ch);
+	$test = strpos($text, "Failed Login");
+	
+	if ($test==false)
+	 {
+	    echo "MADE IT WOOOOOO";
+	 }
+	else
+	 {
+	    echo "FAILED TO LOGIN bruh";
+	 }
 
-    //close connection
-    curl_close($ch);
-    
-    echo $result;
-    echo "Move to njit";
-    echo " I NEED TO PASS!cwehcjrw";
+}
 
-    /* FOR my.njit.edu */
+$ch = curl_init();
 
+$url= "https://cp4.njit.edu/cp/home/login";
+//$url="https://www.njit.edu/cp/login.php";
 
-$url = 'https://www.njit.edu/cp/login.php';
- $fields = array(
-     'userid' => urlencode("np358"),
-     'cplogin' => urlencode("123456Np"),
- );
+$username = 'np358';
+$password = '123456p';
 
-//url-ify the data for the POST
+$fields = array(
+	'user' => urlencode($username),
+	'pass' => urlencode($password),
+	'uuid' => urlencode('0xACA021'),
+);
+
 foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
 rtrim($fields_string, '&');
 
-//open connection
-$ch = curl_init();
-
-//set the url, number of POST vars, POST data
 curl_setopt($ch,CURLOPT_URL, $url);
 curl_setopt($ch,CURLOPT_POST, count($fields));
+curl_setopt($ch,CURLOPT_HEADER, false); 
 curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-
-//execute post
-$result = curl_exec($ch);
-
-//close connection
-curl_close($ch);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 
-// ///////////
+$server_output = curl_exec ($ch);
 
+echo "hello" . $server_output;
+print_r(curl_getinfo($ch));
 
-//  $url = 'http://www.njit.edu/cp/login.php';
-//  $myvars = 'userid=' . $myvar1 . 'cplogin=' . $myvar2;
-
-//  $ch = curl_init( $url );
-//  curl_setopt( $ch, CURLOPT_POST, 1);
-//  curl_setopt( $ch, CURLOPT_POSTFIELDS, $myvars);
-//  curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-//  curl_setopt( $ch, CURLOPT_HEADER, 0);
-//  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-
-//  $response = curl_exec( $ch );
-
- ?>
+checkFail();
+curl_close ($ch);
+?>
