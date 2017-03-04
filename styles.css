@@ -14,7 +14,7 @@ input[type=text],input[type=number],input[type=password], select {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+#submitButton {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -25,7 +25,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+#submitButton:hover {
     background-color: #45a049;
 }
 
@@ -33,5 +33,47 @@ input[type=submit]:hover {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width:33%
+    width:33%;
+	margin-left:30.3%;
+}
+#formid h1{
+	text-align:center;
+}
+
+body {
+    background-color: silver;
+	width: 100%;
+	margin: 0;
+}
+
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.nav-bar.active {
+    background-color: #4CAF50;
+}
+.container{
+	margin-top:15px
 }

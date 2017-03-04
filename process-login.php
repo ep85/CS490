@@ -27,10 +27,11 @@ curl_close($ch);
 
 $json = json_decode($result);
 $success=$json->success;
+echo $success;
 if($success == "true"){
     header("Location: success.php");
 }else{
-    $_SESSION['success']=false;
+    $_SESSION['success']="false";
     header("Location: login.php");
 }
 //gets response from DB success = true or false
