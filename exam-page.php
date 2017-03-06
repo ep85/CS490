@@ -4,46 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles.css">
-	<title>Student Page</title>
+	<title>Exam Page</title>
 </head>
 
 <body>
 	<?php include 'nav.php'; ?>
 	<div class="container2">
 		<h1>Welcome Student</h1>
-
-<div id="Exams" class="tabcontent">
-			<h3>Exams</h3>
-			
-			<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Open Exams</button>
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Available Exams</h2>
-					</div>
-					<div class="modal-body">
-						<ul>
-						<li><a href="#">Midterm #1</a></li>
-						<li><a href="#">Midterm #2</a></li>
-						<li><a href="#">Midterm #3</a></li>
-						<li><a href="#">Final</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<h3>Good Luck</h3>
-					</div>
-				</div>
-
-			</div>
-			
-		</div>
-
 
 
 		<div id="Questions" class="tabcontent show">

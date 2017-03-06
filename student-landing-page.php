@@ -12,47 +12,18 @@
 	<div class="container2">
 		<h1>Welcome Student</h1>
 
-<div id="Exams" class="tabcontent">
-			<h3>Exams</h3>
-			
-			<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Open Exams</button>
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Available Exams</h2>
-					</div>
-					<div class="modal-body">
-						<ul>
-						<li><a href="#">Midterm #1</a></li>
-						<li><a href="#">Midterm #2</a></li>
-						<li><a href="#">Midterm #3</a></li>
-						<li><a href="#">Final</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<h3>Good Luck</h3>
-					</div>
-				</div>
-
-			</div>
-			
-		</div>
-
-
-
 		<div id="Questions" class="tabcontent show">
 			<h3 class="tab-title">Questions</h3>
-			
-
+			<div class="tab-div">
+				<button id="add-new-modal-button" class="blue-button tab-right">Add&nbsp;New</button>
+			</div>
+			<div class="instructor-List">
+				<ul id="Questionslist">
+				</ul>
+			</div>
 
 			<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Open Questions</button>
+			<button id="myBtn">Open Modal</button>
 
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
@@ -65,10 +36,10 @@
 					</div>
 					<div class="modal-body">
 						<ul>
-						<li><a href="#">Question #1</a></li>
-						<li><a href="#">Question #2</a></li>
-						<li><a href="#">Question #3</a></li>
-						<li><a href="#">Question #4</a></li>
+						<li><a href="#">Midterm A</a></li>
+						<li><a href="#">Midterm B</a></li>
+						<li><a href="#">Final A</a></li>
+						<li><a href="#">Final B</a></li>
 						</ul>
 					</div>
 					<div class="modal-footer">
@@ -83,7 +54,19 @@
 
 		</div>
 
-		
+		<div id="Exams" class="tabcontent">
+			<h3>Exams</h3>
+			<p>Paris is the capital of France.</p>
+			<div class="dropdown">
+				<button class="dropbtn">Available Exams</button>
+				<div class="dropdown-content">
+					<a href="#">Midterm A</a>
+					<a href="#">Midterm B</a>
+					<a href="#">Final A</a>
+					<a href="#">Final B</a>
+				</div>
+			</div>
+		</div>
 
 
 		<div><button id="toggle">TOGGLE</button>
