@@ -1,0 +1,565 @@
+body {
+	background-color : #f2f2f2;
+}
+
+#failedTXT{
+    color:red
+}
+.hidden {  
+    display:none;
+} 
+#content{
+  /* DON'T USE DISPLAY NONE/BLOCK! Instead: */
+  background: #cf5;
+  padding: 10px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+          transition: 0.6s;
+  -webkit-transition: 0.6s;
+          transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+#content.appear{
+  visibility: visible;
+  opacity: 1;
+          transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the links inside the tab */
+div.tabcontent a {
+/*     float: left; */
+/*         width:30%; */
+    font-family: roboto;
+    font-weight: 300;
+    display: block;
+    color: black;
+/*     text-align: center; */
+    padding: 1px 10px;
+    text-decoration: none;
+    transition: .2s;
+    font-size: 11px;
+    margin: 0px;
+    
+
+
+}
+
+/* Change background color of links on hover */
+div.tabcontent a:hover {
+    background-color: #4CAF50;
+}
+
+/* Create an active/current tablink class */
+div.tabcontent a:focus, .active {
+    background-color: #ccc;
+}
+
+/* queston form */
+#failedTXT{
+    color:red
+}
+
+input[type=text],input[type=number],input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /*display: inline-block;*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#question, #answer{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height:100px;
+}
+#submitButton {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ 
+#submitButton:hover {
+    background-color: #45a049;
+}
+ 
+#questionDivForm {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  	display: none;
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: white;
+	padding: 7px 20px;
+	width: 1170px;
+    margin: auto;
+	margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.15;     
+}
+.show{
+    display: block;
+}
+.instructor-List ul{
+    list-style-type: none;
+    padding-left:0;
+    
+}
+.instructor-List li{
+    border: 1px solid lightgrey;
+     border-radius: 2px;
+    padding:2px;
+
+ 
+   
+}
+
+.tab-div{
+    position: relative;
+   
+}
+.tab-title, #Exam-Results h3{
+    width:30%;
+    font-family: roboto;
+    font-weight: 300;
+     font-size: 24px;
+}
+
+#Questionslist h4, #Examslist h4,{
+    width:30%;
+    font-family: roboto;
+    font-weight: 300;
+     font-size: 14px;
+}
+
+#Questionslist li, #Examslist li{
+    margin-bottom: 5px;
+    padding:  3px;
+}
+
+
+.tab-right{
+    position: absolute;
+    right: 10px;
+    top:5px;
+    
+}
+.blue-button{
+    background-color:rgba(0,0,255,1.0);
+    border-color:rgba(0,0,255,1.0);
+    border-radius:5px;
+    color:white;
+    padding:6px;
+    font-size:12px;
+}
+.blue-button:hover{
+    background-color:rgba(0,0,255,0.8);
+    border-color:rgba(0,0,255,0.8);
+    opacity: 0.9
+}
+.orange-button{
+    background-color:rgba(255, 153, 0,1.0);
+    border-color:rgba(255, 153, 0,1.0);
+    border-radius:5px;
+    color:white;
+    padding:6px;
+    font-size:12px;
+    position: relative;
+    float:right;
+}
+.orange-button:hover{
+    background-color:rgba(255, 153, 0,0.8);
+    border-color:rgba(255, 153, 0,0.8);
+    opacity: 0.9
+}
+.new-blue-button{
+    background-color:rgba(0,0,255,1.0);
+    border-color:rgba(0,0,255,1.0);
+    border-radius:5px;
+    color:white;
+    padding:6px;
+    font-size:12px;
+    position: relative;
+    float:right;
+}
+.new-blue-button:hover{
+    background-color:rgba(0,0,255,0.8);
+    border-color:rgba(0,0,255,0.8);
+    opacity: 0.9
+}
+.clear-button{
+    background-color:rgba(255, 0, 0,1.0);
+    border-color:rgba(255, 0, 0,1.0);
+    border-radius:5px;
+    color:white;
+    padding:6px;
+    font-size:12px;
+    float:right;
+}
+.clear-button:hover{
+    background-color:rgba(255, 0, 0,0.8);
+    border-color:rgba(255, 0, 0,0.8);
+    opacity: 0.9
+}
+
+.blue-button:focus, .orange-button:focus, .new-blue-button:focus, .clear-button:focus {
+  outline: none;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1; 
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 70%;
+    background-color:#f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.answerArea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height:100px;
+}
+
+#Qquestion{
+    width: 100%;
+    height: 96px;
+}
+
+#formid {
+/*     border-radius: 7px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 17%;
+    margin: auto; */
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: white;
+	padding: 7px 20px;
+	width: 350px;
+    margin: auto;
+	margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;     
+}
+
+#formid h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+#testButton{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#testButton:hover {
+    background-color: #45a049;
+}
+/*
+ *    NAVBAR
+ * 
+ */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /*background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    min-height: 122px;
+    height: 122px;
+    margin-bottom: 0;*/
+    border: none;
+    border-bottom: #4CAF50;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    background: #37474f;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+
+.navbar li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.navbar .active {
+    background-color: #4CAF50;
+}
+
+#homeIcon a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+/*Home Buton Drop Menu*/
+
+.dropdown {
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    background-color: gray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 7px 7px;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+/*
+ *    Icons
+ * 
+ */
+
+
+/* .fa-clock-o {
+	float: right;
+	margin-top: 15px;
+} */
+
+.fa-book {
+	float: left;
+	margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.fa-home { 
+	margin: auto
+}
+
+#nav-clock { 
+	margin: 0px;
+/*     padding: 10px 10px 10px 10px; */
+    
+    
+}
+
+
+/*
+ *    Credentials
+ * 
+ */
+
+
+
+.credentials h3{
+    font-size: 15px;
+    color: lightgray;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 6px;
+    margin-top: 60px;
+}
+
+.credentials p{
+    list-style: none;
+    color: lightgray;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+
+
+
+
+/*
+ *    Footer
+ * 
+ */
+
+.footer {
+    box-sizing: border-box;
+color: rgba(0, 0, 0, 0.38);
+font-family: robotoregular,Helvetica Neue,Helvetica,Arial,sans-serif;
+font-size: 13px;
+line-height: 20px;
+color: lightgray;
+margin-left: 0px;
+margin-right: 0px;
+padding-top: 20px;
+padding-left: 15px;
+padding-right: 15px;
+text-align: center;
+/* width: 1170px; */
+
+}
+
+/*
+
+  STUDENT SUBMIT EXAM
+
+*/
+
+.loader {
+    margin-left: 33%;
+    margin-top: 50px;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.fa-6x{
+    font-size: 8em;
+}
