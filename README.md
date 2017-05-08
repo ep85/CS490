@@ -1,14 +1,14 @@
 <h1> CODE SCHOOL PROJECT </h1>
 
-View Here: https://web.njit.edu/~gab23/login.php
+View Here: https://web.njit.edu/~gab23/login.php <br>
 
-Contributers:
-Eric Palumbo: ep85@njit.edu
-Nishant Patel : np358@njit.edu
-Gustavo Buitrag: gab23@njit.edu
+Contributers:<br>
+Eric Palumbo: ep85@njit.edu  <br>
+Nishant Patel : np358@njit.edu <br>
+Gustavo Buitrag: gab23@njit.edu <br>
 
-Languages used: 
-Javascript
-HTML
-CSS
+Languages used:<br> 
+Javascript <br>
+HTML <br>
+CSS <br>
 PHP
