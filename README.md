@@ -12,3 +12,8 @@ Javascript <br>
 HTML <br>
 CSS <br>
 PHP
+<br>
+<strong> No frameworks were allowed to be used </strong>
+
+<br>
+This application was a student project and was made in a month span, please do not use this project for school projects and no frameworks were used or were allowed to be used.
