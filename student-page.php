@@ -1,118 +1,45 @@
 <!DOCTYPE HTML>
 <html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Roto Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>Student Page</title>
+		<?php
+        include 'student-navbar.php';
+		?>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
 
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles.css">
-	<title>Student Page</title>
-</head>
+			<div id="Exams" class="tabcontent show">
 
-<body>
-	<?php include 'nav.php'; ?>
-	<div class="container2">
-		<h1>Welcome Student</h1>
+				<div class="tab-div">
+					<h3 class="tab-title">Exams</h3>
 
-<div id="Exams" class="tabcontent">
-			<h3>Exams</h3>
-			
-			<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Open Exams</button>
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Available Exams</h2>
-					</div>
-					<div class="modal-body">
-						<ul>
-						<li><a href="#">Midterm #1</a></li>
-						<li><a href="#">Midterm #2</a></li>
-						<li><a href="#">Midterm #3</a></li>
-						<li><a href="#">Final</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<h3>Good Luck</h3>
-					</div>
 				</div>
 
-			</div>
-			
-		</div>
-
-
-
-		<div id="Questions" class="tabcontent show">
-			<h3 class="tab-title">Questions</h3>
-			
-
-
-			<!-- Trigger/Open The Modal -->
-			<button id="myBtn">Open Questions</button>
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-				<!-- Modal content -->
-				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Available Exams</h2>
-					</div>
-					<div class="modal-body">
-						<ul>
-						<li><a href="#">Question #1</a></li>
-						<li><a href="#">Question #2</a></li>
-						<li><a href="#">Question #3</a></li>
-						<li><a href="#">Question #4</a></li>
-						</ul>
-					</div>
-					<div class="modal-footer">
-						<h3></h3>
-					</div>
+				<div class="instructor-List" >
+					<ul id="Questionslist"></ul>
 				</div>
-
 			</div>
 
+			<div id="Exam-Results" class="tabcontent">
+				<h3>Exam Results</h3>
+				<div class="instructor-List tab-div" >
 
-
-
-		</div>
-
-		
-
-
-		<div><button id="toggle">TOGGLE</button>
-		</div>
-		<div id="content">Scores not released yet</div>
-
-
-		<p> </p>
-
-		<!-- Trigger/Open The Modal -->
-		<div>
-			<button id="myBtn">View results</button>
-		</div>
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-
-			<!-- Modal content -->
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<p>Exam results will be available when instructor releases scores</p>
+					<ul id="Examslist"></ul>
+				</div>
 			</div>
 
 		</div>
-
-		<script type="text/javascript" src="main.js">
-		</script>
-		<script modal();>
-		</script>
-	</div>
-</body>
-
+		<?php
+        include 'footer.php';
+		?>
+		<script type="text/javascript" src="js/student-main.js"></script>
+	</body>
 </html>
