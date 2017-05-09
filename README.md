@@ -1,6 +1,14 @@
 <h1> CODE SCHOOL PROJECT </h1>
 
-View Here: https://web.njit.edu/~gab23/login.php <br>
+View Here: https://web.njit.edu/~gab23/login.php <br> <br>
+Login: <br>
+Teacher: <br>
+Username: ep85 <br>
+pass: 12345<br>
+<br>
+Student
+Username: np358 <br>
+pass: 12345<br>
 
 Contributers:<br>
 Eric Palumbo: ep85@njit.edu  <br>
